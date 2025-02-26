@@ -7,10 +7,10 @@ function updateImage() {
 
 
   console.log("window.innerWidth",window.innerWidth)
-  if (window.innerWidth = 600) {
+  if (window.innerWidth <= 600) {
     imgFormato.src = `img/cuadrada.mp4`;
     
-  } else if (window.innerWidth = 768) {
+  } else if (window.innerWidth <= 768) {
     imgFormato.src = `img/rectangular.mp4`;
 
   } 
