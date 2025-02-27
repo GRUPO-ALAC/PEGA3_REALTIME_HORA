@@ -16,7 +16,6 @@ function updateImage() {
   } 
 }
 
-
 async function init() {
     updateClock();
 
@@ -27,15 +26,18 @@ function updateClock() {
   if (hora24 > 12) {
     hours = (hora24 - 12);
   }
+  else {
+    hours = hora24;
+  }
   let minutes = now.getMinutes();
   let ampm = hora24 >= 12 ? 'PM' : 'AM';
 
    
   // Agrega un cero delante si el número es menor a 10
-  hora24 = hora24 < 10 ? '0' + hora24 : hora24;
+  hours = hours < 10 ? '0' + hours : hours;
   minutes = minutes < 10 ? '0' + minutes : minutes;
 
-  document.getElementById('millones').innerText = `${hora24}:${minutes}`;
+  document.getElementById('millones').innerText = `${hours}:${minutes}`;
   document.getElementById('hour').innerText = `${ampm}`;
 }
 
